@@ -165,18 +165,17 @@ header {
     cursor: pointer;
     border-radius: 4px;
 }
-.form-modal {
-    padding: 0 40px;
-}
 .form-p {
     font-weight: 700;
     font-size: 20px;
     line-height: 23.44px;
     letter-spacing: 0.03em;
     text-align: center;
-    padding-top: 40px;
+    margin-bottom: 12px;
 }
 .form-label {
+    display: block;
+    margin-bottom: 4px;
     font-weight: 400;
     font-size: 12px;
     line-height: 14.06px;
@@ -186,39 +185,61 @@ header {
 .form-input {
     width: 448px;
     height: 40px;
-    margin-bottom: 10px;
     padding-left: 42px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
 }
 .form-input:hover,
-.form-input:focus {
+.form-input:focus,
+.form-input:focus-visible {
+    outline: none;
     border-color: #2196f3;
 }
-.form-icon:hover,
-.form-icon:focus {
+.form-input:hover ~ .form-icon,
+.form-input:focus ~ .form-icon {
     fill: #2196f3; 
 }
 .form-box {
     position: relative;
+    margin-bottom: 10px;
 }
 .form-icon {
     position: absolute;
     left: 12px;
     top: 11px;
     fill: #212121;
+    pointer-events: none;
 }
 .form-comment {
+    display: block;
+    margin-bottom: 20px;
+    padding: 12px 16px;
     width: 448px; 
     height: 120px;  
     margin-bottom: 50px;
     resize: none;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
+    cursor: pointer;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-comment:focus,
+.form-comment:focus-visible {
+    outline: none;
+    border-color:  #2196f3;
 }
 .form-agreement {
     display: flex;
     justify-content: center;
+}
+.form-checkbox {
+    display: block;
+    margin-bottom: 30px;
+    margin-right: 8.38px;
+}
+.agreement {
     font-weight: 400;
     font-size: 14px;
     line-height: 24px;
@@ -246,6 +267,7 @@ header {
     line-height: 30px;
     letter-spacing: 0.06em;
     color: #ffffff;
+    cursor: pointer;
 }
 .work-section {
     padding-top: 94px;
@@ -518,6 +540,7 @@ header {
     margin-right: 12px;
 }
 .label-footer {
+    display: inline-block;
     font-weight: 700;
     font-size: 14px;
     line-height: 16.41px;
@@ -540,6 +563,7 @@ header {
     padding-bottom: 15px;
     padding-top: 15px;
     background-color: #2f303a;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-footer-button {
     width: 200px;
@@ -580,6 +604,7 @@ header {
 }
 .modal {
     position: absolute;
+    padding: 40px 40px;
     top: 50%;
     left: 50%;
     width: 528px;
