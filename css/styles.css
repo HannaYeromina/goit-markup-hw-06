@@ -166,6 +166,7 @@ header {
     border-radius: 4px;
 }
 .form-p {
+    line-height: 1.15;
     font-weight: 700;
     font-size: 20px;
     line-height: 23.44px;
@@ -211,6 +212,7 @@ header {
     top: 11px;
     fill: #212121;
     pointer-events: none;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-comment {
     display: block;
@@ -218,7 +220,6 @@ header {
     padding: 12px 16px;
     width: 448px; 
     height: 120px;  
-    margin-bottom: 50px;
     resize: none;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
@@ -230,22 +231,39 @@ header {
     outline: none;
     border-color:  #2196f3;
 }
-.form-agreement {
-    display: flex;
-    justify-content: center;
-}
 .form-checkbox {
+    appearance: none;
     display: block;
-    margin-bottom: 30px;
     margin-right: 8.38px;
 }
+.span-checkbox {
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    border-radius: 1px;
+    border: 1px solid #212121;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+.form-checkbox:checked + .span-checkbox {
+     border: 1px solid #212121;
+     background-image: url("../images/check.svg");
+}
+.form-checkbox:focus + .span-checkbox {
+    border: none;
+    background-color: #2196f3;
+    background-image: url("../images/check.svg");
+}
 .agreement {
+    display: flex;
+    align-items: center;
     font-weight: 400;
     font-size: 14px;
     line-height: 24px;
     letter-spacing: 0.03em;
     color: #757575;
     margin-bottom: 30px;
+    margin-left: 8.38px;
 }
 .form-a {
     font-weight: 400;
@@ -564,6 +582,10 @@ header {
     padding-top: 15px;
     background-color: #2f303a;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.input-footer:focus {
+    outline: none;
+    border-color:#2196F3;
 }
 .form-footer-button {
     width: 200px;
