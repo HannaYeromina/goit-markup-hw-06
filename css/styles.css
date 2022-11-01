@@ -169,7 +169,6 @@ header {
     line-height: 1.15;
     font-weight: 700;
     font-size: 20px;
-    line-height: 23.44px;
     letter-spacing: 0.03em;
     text-align: center;
     margin-bottom: 12px;
@@ -240,16 +239,13 @@ header {
     display: inline-block;
     width: 16px;
     height: 15px;
+    margin-right: 7px;
     border-radius: 1px;
     border: 1px solid #212121;
     background-repeat: no-repeat;
     background-position: 50% 50%;
 }
 .form-checkbox:checked + .span-checkbox {
-     border: 1px solid #212121;
-     background-image: url("../images/check.svg");
-}
-.form-checkbox:focus + .span-checkbox {
     border: none;
     background-color: #2196f3;
     background-image: url("../images/check.svg");
@@ -257,13 +253,13 @@ header {
 .agreement {
     display: flex;
     align-items: center;
+    justify-content: center;
     font-weight: 400;
     font-size: 14px;
     line-height: 24px;
     letter-spacing: 0.03em;
     color: #757575;
     margin-bottom: 30px;
-    margin-left: 8.38px;
 }
 .form-a {
     font-weight: 400;
